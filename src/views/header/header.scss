@@ -1,0 +1,79 @@
+.header-container {
+    .flex-left {
+        display: flex;
+        justify-content: flex-end;
+
+        .Logo {
+            width: 69%;
+            height: auto;
+            animation: App-logo-spin infinite 20s linear;
+        }
+    }
+
+    .flex-right {
+        .flex-top {
+            .Search-input {
+                border: 1px solid rgb(197, 197, 197);
+                border-radius: 5px;
+                color: rgb(59, 59, 250);
+                justify-content: center;
+                align-items: center;
+
+                input {
+                    border: none;
+                    outline: none;
+                    text-wrap: wrap;
+                    // border-bottom: 1px solid grey;
+                }
+
+                .Search {
+                    border-left: 1px solid grey;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+
+            .Nav1 {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .cart {
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                border-left: 2px solid rgb(231, 231, 231);
+
+                #cart {
+
+                    color: grey;
+
+                    text-decoration: none;
+                    padding: 5px 15px;
+
+                    &:hover {
+                        background-color: #ddd;
+                        color: black;
+                        border-radius: 5px !important;
+                    }
+                }
+            }
+
+        }
+
+        .flex-bottom {
+            margin: 10px 0;
+        }
+
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

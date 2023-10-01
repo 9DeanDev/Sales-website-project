@@ -1,0 +1,31 @@
+/* The following line can be included in a src/App.scss */
+@import '~bootstrap/scss/bootstrap';
+
+.App {
+  margin: 0;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.main-content {
+  padding: 10px 0;
+  background: rgb(235, 235, 235);
+  height: 100vh;
+  margin: 0;
+
+  .tab-content {
+    // background: white;
+    border-radius: 10px;
+    // padding: 10px;
+  }
+}

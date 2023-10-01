@@ -1,0 +1,32 @@
+.Login-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        font-size: 25px;
+        border: none;
+        outline: none;
+        // border-radius: 5px;
+        width: 100%;
+        margin: 10px 10px;
+        padding: 5px;
+        border-bottom: 1px solid grey;
+    }
+
+    button {
+        width: 80%;
+        font-size: 25px;
+        color: #f0f0f0;
+        background: rgb(252, 82, 82);
+        border: none;
+        outline: none;
+        margin: 10px;
+        border-radius: 5px;
+
+        &:hover {
+            background: rgb(252, 105, 105);
+        }
+    }
+}
