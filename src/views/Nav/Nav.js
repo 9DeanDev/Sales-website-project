@@ -5,14 +5,14 @@ const Nav1 = () => {
     return (
         <><div className="topnav">
             <div className='child'>
-                <NavLink to="/"><i class="fa-solid fa-house"></i> Trang chủ</NavLink>
+                <NavLink to="/"><i className="fa-solid fa-house"></i> Trang chủ</NavLink>
             </div>
             <div className='child'>
-                <NavLink to="/astra"><i class="fa-solid fa-crown"></i> Astra</NavLink>
+                <NavLink to="/astra"><i className="fa-solid fa-crown"></i> Astra</NavLink>
             </div>
             <div className='child'>
                 <button className='button'>
-                    <i class="fa-regular fa-face-grin-wink"></i> <Account />
+                    <i className="fa-regular fa-face-grin-wink"></i> <Account />
                 </button>
             </div>
 
@@ -35,10 +35,10 @@ const Nav2 = () => {
     return (
         <>
             <div className="topnav">
-                <Link to="/Shirt">Áo</Link>
-                <Link to="/Trousers">Quần</Link>
-                <Link to="/Shoe">Giày</Link>
-                <Link to="/Socks">Tất</Link>
+                <Link to="/ListShirt">Áo</Link>
+                <Link to="/ListTrousers">Quần</Link>
+                <Link to="/ListShoe">Giày</Link>
+                <Link to="/ListSocks">Tất</Link>
             </div>
             {/* <div className="topnav">
                 <Link to="/Shirt">Áo</Link>

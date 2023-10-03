@@ -1,16 +1,15 @@
+import Shoe1 from '../../../assets/Shoe1.jpg'
+import Shoe2 from '../../../assets/Shoe2.jpg'
+import Shoe3 from '../../../assets/Shoe3.jpg'
+import Shoe4 from '../../../assets/Shoe4.webp'
+import Shoe5 from '../../../assets/Shoe5.webp'
 import { useState } from 'react'
-import Shirt1 from '../../assets/Shirt1.png'
-import Shirt2 from '../../assets/Shirt2.png'
-import Shirt3 from '../../assets/Shirt3.png'
-import Shirt4 from '../../assets/Shirt4.png'
-import Shirt5 from '../../assets/Shirt5.png'
-import './product.scss'
+import '../product.scss'
 import Lightbox from "react-18-image-lightbox"
 
-
-const Shirt = () => {
+const Shoe = () => {
     const [number, setNumber] = useState('1')
-    const [currentImg, setCurrentImg] = useState(Shirt1)
+    const [currentImg, setCurrentImg] = useState(Shoe1)
     const handleValidation = (event) => {
         setNumber(event.target.value.replaceAll(/[^0-9]/g, ""))
     }
@@ -27,7 +26,7 @@ const Shirt = () => {
         setCurrentImg(item)
     }
     const images = [
-        Shirt1, Shirt2, Shirt3, Shirt4, Shirt5
+        Shoe1, Shoe2, Shoe3, Shoe4, Shoe5
     ];
     const [isOpen, setIsOpen] = useState(false)
     const [photoIndex, setPhoToInDex] = useState(0)
@@ -36,29 +35,28 @@ const Shirt = () => {
         setPhoToInDex(index)
         setIsOpen(true)
     }
-    const handleClickAddProduct = () => { }
     return (
         <>
             <div className='product-container row'>
                 <div className='product col-4'>
                     <div >
-                        <img className='img-up' src={currentImg} alt='Shirt' onClick={() => handleClickImg()} />
+                        <img className='img-up' src={currentImg} alt='Shoe' onClick={() => handleClickImg()} />
                     </div>
                     <div id='product-carouser' className='product-carouser lightbox'>
                         <div className='img-link'>
-                            <img className={currentImg === Shirt1 ? 'img-down active' : 'img-down'} alt='Shirt' src={Shirt1} onClick={() => handleClickShow(Shirt1)} />
+                            <img className={currentImg === Shoe1 ? 'img-down active' : 'img-down'} alt='Shoe' src={Shoe1} onClick={() => handleClickShow(Shoe1)} />
                         </div>
                         <div className='img-link'>
-                            <img className={currentImg === Shirt2 ? 'img-down active' : 'img-down'} alt='Shirt' src={Shirt2} onClick={() => handleClickShow(Shirt2)} />
+                            <img className={currentImg === Shoe2 ? 'img-down active' : 'img-down'} alt='Shoe' src={Shoe2} onClick={() => handleClickShow(Shoe2)} />
                         </div>
                         <div className='img-link'>
-                            <img className={currentImg === Shirt3 ? 'img-down active' : 'img-down'} alt='Shirt' src={Shirt3} onClick={() => handleClickShow(Shirt3)} />
+                            <img className={currentImg === Shoe3 ? 'img-down active' : 'img-down'} alt='Shoe' src={Shoe3} onClick={() => handleClickShow(Shoe3)} />
                         </div>
                         <div className='img-link'>
-                            <img className={currentImg === Shirt4 ? 'img-down active' : 'img-down'} alt='Shirt' src={Shirt4} onClick={() => handleClickShow(Shirt4)} />
+                            <img className={currentImg === Shoe4 ? 'img-down active' : 'img-down'} alt='Shoe' src={Shoe4} onClick={() => handleClickShow(Shoe4)} />
                         </div>
                         <div className='img-link'>
-                            <img className={currentImg === Shirt5 ? 'img-down active' : 'img-down'} alt='Shirt' src={Shirt5} onClick={() => handleClickShow(Shirt5)} />
+                            <img className={currentImg === Shoe5 ? 'img-down active' : 'img-down'} alt='Shoe' src={Shoe5} onClick={() => handleClickShow(Shoe5)} />
                         </div>
                     </div>
                     {isOpen && (
@@ -102,12 +100,12 @@ const Shirt = () => {
                         }}>+</button>
                     </div>
                     <h5>Tạm tính</h5>
-                    <div className='price'>{120000 * number} VNĐ</div>
+                    <div className='price'>{200000 * number} VNĐ</div>
                     <button className='Buy-now-btn'>Mua ngay</button>
-                    <button className='Add-to-cart-btn' onClick={() => handleClickAddProduct()}>Thêm vào giỏ</button>
+                    <button className='Add-to-cart-btn'>Thêm vào giỏ</button>
                 </div>
             </div>
         </>
     )
 }
-export default Shirt;
+export default Shoe;

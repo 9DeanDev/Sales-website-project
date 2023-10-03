@@ -1,15 +1,16 @@
-import Shoe1 from '../../assets/Shoe1.jpg'
-import Shoe2 from '../../assets/Shoe2.jpg'
-import Shoe3 from '../../assets/Shoe3.jpg'
-import Shoe4 from '../../assets/Shoe4.webp'
-import Shoe5 from '../../assets/Shoe5.webp'
 import { useState } from 'react'
-import './product.scss'
+import Socks1 from '../../../assets/Socks1.jpg'
+import Socks2 from '../../../assets/Socks2.jpg'
+import Socks3 from '../../../assets/Socks3.jpg'
+import Socks4 from '../../../assets/Socks4.jpg'
+// import Socks5 from '../../assets/Socks2.jpg'
+import '../product.scss'
 import Lightbox from "react-18-image-lightbox"
 
-const Shoe = () => {
+
+const Socks = () => {
     const [number, setNumber] = useState('1')
-    const [currentImg, setCurrentImg] = useState(Shoe1)
+    const [currentImg, setCurrentImg] = useState(Socks1)
     const handleValidation = (event) => {
         setNumber(event.target.value.replaceAll(/[^0-9]/g, ""))
     }
@@ -26,7 +27,7 @@ const Shoe = () => {
         setCurrentImg(item)
     }
     const images = [
-        Shoe1, Shoe2, Shoe3, Shoe4, Shoe5
+        Socks1, Socks2, Socks3, Socks4
     ];
     const [isOpen, setIsOpen] = useState(false)
     const [photoIndex, setPhoToInDex] = useState(0)
@@ -40,24 +41,24 @@ const Shoe = () => {
             <div className='product-container row'>
                 <div className='product col-4'>
                     <div >
-                        <img className='img-up' src={currentImg} alt='Shoe' onClick={() => handleClickImg()} />
+                        <img className='img-up' src={currentImg} alt='Socks' onClick={() => handleClickImg()} />
                     </div>
                     <div id='product-carouser' className='product-carouser lightbox'>
                         <div className='img-link'>
-                            <img className={currentImg === Shoe1 ? 'img-down active' : 'img-down'} alt='Shoe' src={Shoe1} onClick={() => handleClickShow(Shoe1)} />
+                            <img className={currentImg === Socks1 ? 'img-down active' : 'img-down'} alt='Socks' src={Socks1} onClick={() => handleClickShow(Socks1)} />
                         </div>
                         <div className='img-link'>
-                            <img className={currentImg === Shoe2 ? 'img-down active' : 'img-down'} alt='Shoe' src={Shoe2} onClick={() => handleClickShow(Shoe2)} />
+                            <img className={currentImg === Socks2 ? 'img-down active' : 'img-down'} alt='Socks' src={Socks2} onClick={() => handleClickShow(Socks2)} />
                         </div>
                         <div className='img-link'>
-                            <img className={currentImg === Shoe3 ? 'img-down active' : 'img-down'} alt='Shoe' src={Shoe3} onClick={() => handleClickShow(Shoe3)} />
+                            <img className={currentImg === Socks3 ? 'img-down active' : 'img-down'} alt='Socks' src={Socks3} onClick={() => handleClickShow(Socks3)} />
                         </div>
                         <div className='img-link'>
-                            <img className={currentImg === Shoe4 ? 'img-down active' : 'img-down'} alt='Shoe' src={Shoe4} onClick={() => handleClickShow(Shoe4)} />
+                            <img className={currentImg === Socks4 ? 'img-down active' : 'img-down'} alt='Socks' src={Socks4} onClick={() => handleClickShow(Socks4)} />
                         </div>
-                        <div className='img-link'>
-                            <img className={currentImg === Shoe5 ? 'img-down active' : 'img-down'} alt='Shoe' src={Shoe5} onClick={() => handleClickShow(Shoe5)} />
-                        </div>
+                        {/* <div className='img-link'>
+                            <img className={currentImg === Socks5 ? 'img-down active' : 'img-down'} alt='Socks' src={Socks5} onClick={() => handleClickShow(Socks5)} />
+                        </div> */}
                     </div>
                     {isOpen && (
                         <Lightbox
@@ -100,12 +101,13 @@ const Shoe = () => {
                         }}>+</button>
                     </div>
                     <h5>Tạm tính</h5>
-                    <div className='price'>{200000 * number} VNĐ</div>
+                    <div className='price'>{135000 * number} VNĐ</div>
                     <button className='Buy-now-btn'>Mua ngay</button>
                     <button className='Add-to-cart-btn'>Thêm vào giỏ</button>
+
                 </div>
             </div>
         </>
     )
 }
-export default Shoe;
+export default Socks;

@@ -1,7 +1,12 @@
 import { Nav1, Nav2 } from '../Nav/Nav';
 import './header.scss'
 import logo from '../../assets/logo.svg';
+import { useEffect } from 'react';
 const Header = () => {
+    // var currentCart = localStorage.getItem('cart')
+    // useEffect(() => {
+    //     localStorage.setItem('cart', currentCart)
+    // }, [currentCart])
     return (
         <>
             <div className="header-container container-fluid my-2">
@@ -12,15 +17,15 @@ const Header = () => {
                     <div className='flex-right col-10'>
                         <div className='flex-top row'>
                             <div className='Search-input row col-6'>
-                                <input placeholder='Bạn tìm gì hôm nay' className='col-9' autoFocus />
-                                <div className='Search col-3'>Tìm kiếm</div>
+                                <input style={{ fontFamily: 'Font Awesome 6 Free' }} placeholder="&#xf002; Bạn tìm gì hôm nay" className='col-10' autoFocus />
+                                <div className='Search col-2'>Tìm kiếm</div>
                             </div>
                             <div className='row col-6'>
-                                <div className='Nav1 col-9' >
+                                <div className='Nav1 col-10' >
                                     <Nav1 />
                                 </div>
-                                <div className='cart col-3'>
-                                    <a href='/' id='cart'><i class="fa-solid fa-cart-shopping"> <span> (0) </span></i></a>
+                                <div className='cart col-2'>
+                                    <a href='/' id='cart'><i className="fa-solid fa-cart-shopping"><span> ({localStorage.getItem('cart')}) </span></i></a>
                                 </div>
                             </div>
                         </div>

@@ -6,10 +6,10 @@ import Todolist from './views/Todolist/Todolist';
 import Header from './views/header/header';
 import Footer from './views/footer/footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Shirt from './views/Products/Shirt';
-import Trousers from './views/Products/Trousers';
-import Shoe from './views/Products/Shoe';
-import Socks from './views/Products/Socks';
+import Shirt from './views/Products/Shirt/Shirt';
+import Trousers from './views/Products/Trousers/Trousers';
+import Shoe from './views/Products/Shoe/Shoe';
+import Socks from './views/Products/Socks/Socks';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-18-image-lightbox/style.css"
 import Notfound from './views/Products/404';
@@ -29,7 +29,11 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/astra" element={<Astra />} />
                 <Route path="/:name" element={<Product />} />
-                <Route path="*" element={<Notfound />} />
+                <Route path="/ListShirt/:idShirt" element={<Shirt />} />
+                <Route path="/ListShoe/:idShoe" element={<Shoe />} />
+                <Route path="/ListTrousers/:idTrousers" element={<Trousers />} />
+                <Route path="/ListSocks/:idSocks" element={<Socks />} />
+                {/* <Route path="*" element={<Notfound />} /> */}
               </Routes>
               {/* <div id="home" className="container tab-pane active">
                 <Home />

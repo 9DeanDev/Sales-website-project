@@ -1,31 +1,35 @@
 import { useParams } from "react-router-dom";
-import Shirt from "./Shirt";
-import Shoe from "./Shoe";
-import Trousers from "./Trousers";
-import Socks from "./Socks";
+import Shirt from "./Shirt/Shirt";
+import Shoe from "./Shoe/Shoe";
+import Trousers from "./Trousers/Trousers";
+import Socks from "./Socks/Socks";
+import ListShirt from "./Shirt/ListShirt";
+import ListShoe from "./Shoe/ListShoe";
+import ListTrousers from "./Trousers/ListTrousers";
+import ListSocks from "./Socks/ListSocks";
 
 const Product = () => {
     let { name } = useParams()
     return (
         <>
-            {name === 'Shirt' &&
+            {name === 'ListShirt' &&
                 <>
-                    <Shirt />
+                    <ListShirt />
                 </>
             }
-            {name === 'Shoe' &&
+            {name === 'ListShoe' &&
                 <>
-                    <Shoe />
+                    <ListShoe />
                 </>
             }
-            {name === 'Trousers' &&
+            {name === 'ListTrousers' &&
                 <>
-                    <Trousers />
+                    <ListTrousers />
                 </>
             }
-            {name === 'Socks' &&
+            {name === 'ListSocks' &&
                 <>
-                    <Socks />
+                    <ListSocks />
                 </>
             }
         </>

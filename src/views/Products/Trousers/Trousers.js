@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import Trousers1 from '../../assets/Trousers1.jpg'
-import Trousers2 from '../../assets/Trousers2.jpg'
-import Trousers3 from '../../assets/Trousers3.jpg'
-import Trousers4 from '../../assets/Trousers4.jpg'
-import Trousers5 from '../../assets/Trousers5.jpg'
-import './product.scss'
+import Trousers1 from '../../../assets/Trousers1.jpg'
+import Trousers2 from '../../../assets/Trousers2.jpg'
+import Trousers3 from '../../../assets/Trousers3.jpg'
+import Trousers4 from '../../../assets/Trousers4.jpg'
+import Trousers5 from '../../../assets/Trousers5.jpg'
+import '../product.scss'
 import Lightbox from "react-18-image-lightbox"
 
 
